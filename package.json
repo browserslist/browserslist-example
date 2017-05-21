@@ -1,17 +1,37 @@
 {
   "private": true,
-  "browserslist": ["last 1 edge version"],
+  "browserslist": ["Edge 15"],
   "babel": {
     "presets": [
       [
         "env",
         {
           "targets": {
-            "browsers": "last 1 edge version"
+            "browsers": "Edge 15"
           }
         }
       ]
     ]
+  },
+  "eslintConfig": {
+    "parserOptions": {
+      "ecmaVersion": 6
+    },
+    "plugins": [
+      "compat"
+    ],
+    "rules": {
+      "compat/compat": "warn"
+    }
+  },
+  "stylelint": {
+    "plugins": [
+      "stylelint-no-unsupported-browser-features"
+    ],
+    "rules": {
+      "plugin/no-unsupported-browser-features": true
+    },
+    "defaultSeverity": "warning"
   },
   "dependencies": {
     "autoprefixer": "^7.1.0",
@@ -29,23 +49,6 @@
       "autoprefixer": {},
       "postcss-normalize": {}
     }
-  },
-  "eslintConfig": {
-    "plugins": [
-      "compat"
-    ],
-    "rules": {
-      "compat/compat": "warn"
-    }
-  },
-  "stylelint": {
-    "plugins": [
-      "stylelint-no-unsupported-browser-features"
-    ],
-    "rules": {
-      "plugin/no-unsupported-browser-features": true
-    },
-    "defaultSeverity": "warning"
   },
   "scripts": {
     "build:css": "postcss src/app.css -o build/app.css",

@@ -15,3 +15,10 @@ legend {box-sizing: border-box;color: inherit;display: table;max-width: 100%;pad
 }
 details {display: block
 }
+body {
+  -ms-user-select: none;
+      user-select: none
+}
+.slide {
+  will-change: transform
+}
