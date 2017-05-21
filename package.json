@@ -1,0 +1,58 @@
+{
+  "private": true,
+  "browserslist": ["last 1 edge version"],
+  "babel": {
+    "presets": [
+      [
+        "env",
+        {
+          "targets": {
+            "browsers": "last 1 edge version"
+          }
+        }
+      ]
+    ]
+  },
+  "dependencies": {
+    "autoprefixer": "^7.1.0",
+    "babel-cli": "^6.24.1",
+    "babel-preset-env": "^1.4.0",
+    "eslint": "^3.19.0",
+    "eslint-plugin-compat": "^1.0.2",
+    "postcss-cli": "^4.0.0",
+    "postcss-normalize": "^2.0.0",
+    "stylelint": "^7.10.1",
+    "stylelint-no-unsupported-browser-features": "^1.0.0"
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {},
+      "postcss-normalize": {}
+    }
+  },
+  "eslintConfig": {
+    "plugins": [
+      "compat"
+    ],
+    "rules": {
+      "compat/compat": "warn"
+    }
+  },
+  "stylelint": {
+    "plugins": [
+      "stylelint-no-unsupported-browser-features"
+    ],
+    "rules": {
+      "plugin/no-unsupported-browser-features": true
+    },
+    "defaultSeverity": "warning"
+  },
+  "scripts": {
+    "build:css": "postcss src/app.css -o build/app.css",
+    "build:js": "babel src/app.js -o build/app.js",
+    "lint:css": "stylelint src/*.css",
+    "lint:js": "eslint src/*.js",
+    "test": "npm run lint:css && npm run lint:js",
+    "build": "npm run test && npm run build:css && npm run build:js"
+  }
+}
