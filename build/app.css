@@ -1,19 +1,32 @@
-hr {overflow: visible
+hr {
+  overflow: visible
 }
-abbr[title] {text-decoration: underline;text-decoration: underline dotted
+abbr[title] {
+  text-decoration: underline;
+  text-decoration: underline dotted
 }
 b,
-strong {font-weight: bolder
+strong {
+  font-weight: bolder
 }
 button,
-input {overflow: visible
+input {
+  overflow: visible
 }
 button,
-select {text-transform: none
+select {
+  text-transform: none
 }
-legend {box-sizing: border-box;color: inherit;display: table;max-width: 100%;padding: 0;white-space: normal
+legend {
+  box-sizing: border-box;
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  padding: 0;
+  white-space: normal
 }
-details {display: block
+details {
+  display: block
 }
 body {
   -ms-user-select: none;

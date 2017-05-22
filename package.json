@@ -1,6 +1,8 @@
 {
   "private": true,
-  "browserslist": ["Edge 15"],
+  "browserslist": [
+    "Edge 15"
+  ],
   "babel": {
     "presets": [
       [
@@ -40,14 +42,14 @@
     "eslint": "^3.19.0",
     "eslint-plugin-compat": "^1.0.2",
     "postcss-cli": "^4.0.0",
-    "postcss-normalize": "^2.0.0",
+    "postcss-normalize": "^2.0.1",
     "stylelint": "^7.10.1",
     "stylelint-no-unsupported-browser-features": "^1.0.0"
   },
   "postcss": {
     "plugins": {
-      "autoprefixer": {},
-      "postcss-normalize": {}
+      "postcss-normalize": {},
+      "autoprefixer": {}
     }
   },
   "scripts": {
