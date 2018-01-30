@@ -4,6 +4,12 @@ body {
   user-select: none
 }
 
+.popup {
+  --text-color: black;
+  color: var(--text-color);
+  background-color: #bbb9;
+}
+
 .slide {
   will-change: transform
 }

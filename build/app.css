@@ -65,6 +65,12 @@ body {
       user-select: none
 }
 
+.popup {
+  --text-color: black;
+  color: var(--text-color);
+  background-color: rgba(187, 187, 187, 0.6);
+}
+
 .slide {
   will-change: transform
 }

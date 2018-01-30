@@ -1,7 +1,7 @@
 {
   "private": true,
   "browserslist": [
-    "Edge 15"
+    "Edge 16"
   ],
   "babel": {
     "presets": [
@@ -39,12 +39,14 @@
     "eslint-plugin-compat": "^2.2.0",
     "postcss-cli": "^4.1.1",
     "postcss-normalize": "^4.0.0",
+    "postcss-preset-env": "^2.1.0",
     "stylelint": "^8.4.0",
     "stylelint-no-unsupported-browser-features": "^2.0.0"
   },
   "postcss": {
     "plugins": {
       "postcss-normalize": {},
+      "postcss-preset-env": {},
       "autoprefixer": {}
     }
   },
