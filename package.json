@@ -3,6 +3,13 @@
   "browserslist": [
     "Edge 16"
   ],
+  "postcss": {
+    "plugins": {
+      "postcss-normalize": {},
+      "postcss-preset-env": {},
+      "autoprefixer": {}
+    }
+  },
   "babel": {
     "presets": [
       [
@@ -30,6 +37,14 @@
     },
     "defaultSeverity": "warning"
   },
+  "scripts": {
+    "build:css": "postcss src/app.css -o dist/app.css",
+    "build:js": "babel src/app.js -o dist/app.js",
+    "lint:css": "stylelint src/*.css",
+    "lint:js": "eslint src/*.js",
+    "test": "npm run lint:css && npm run lint:js",
+    "build": "npm run test && npm run build:css && npm run build:js"
+  },
   "dependencies": {
     "@babel/cli": "^7.0.0-beta.38",
     "@babel/core": "^7.0.0-beta.38",
@@ -42,20 +57,5 @@
     "postcss-preset-env": "^2.1.0",
     "stylelint": "^8.4.0",
     "stylelint-no-unsupported-browser-features": "^2.0.0"
-  },
-  "postcss": {
-    "plugins": {
-      "postcss-normalize": {},
-      "postcss-preset-env": {},
-      "autoprefixer": {}
-    }
-  },
-  "scripts": {
-    "build:css": "postcss src/app.css -o dist/app.css",
-    "build:js": "babel src/app.js -o dist/app.js",
-    "lint:css": "stylelint src/*.css",
-    "lint:js": "eslint src/*.js",
-    "test": "npm run lint:css && npm run lint:js",
-    "build": "npm run test && npm run build:css && npm run build:js"
   }
 }
