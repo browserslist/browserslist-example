@@ -1,43 +1,43 @@
 html {
-  line-height: 1.15
+  line-height: 1.15;
 }
 
 hr {
-  overflow: visible
+  overflow: visible;
 }
 
 pre {
   font-family: monospace, monospace;
-  font-size: 1em
+  font-size: 1em;
 }
 
 abbr[title] {
   text-decoration: underline;
-  text-decoration: underline dotted
+  text-decoration: underline dotted;
 }
 
 b,
 strong {
-  font-weight: bolder
+  font-weight: bolder;
 }
 
 code,
 kbd,
 samp {
   font-family: monospace, monospace;
-  font-size: 1em
+  font-size: 1em;
 }
 
 small {
-  font-size: 80%
+  font-size: 80%;
 }
 
 button {
-  text-transform: none
+  text-transform: none;
 }
 
 input {
-  overflow: visible
+  overflow: visible;
 }
 
 legend {
@@ -45,24 +45,24 @@ legend {
   display: table;
   max-width: 100%;
   padding: 0;
-  white-space: normal
+  white-space: normal;
 }
 
 progress {
-  display: inline-block
+  display: inline-block;
 }
 
 details {
-  display: block
+  display: block;
 }
 
 summary {
-  display: list-item
+  display: list-item;
 }
 
 body {
   -ms-user-select: none;
-      user-select: none
+      user-select: none;
 }
 
 .popup {
@@ -72,5 +72,5 @@ body {
 }
 
 .slide {
-  will-change: transform
+  will-change: transform;
 }

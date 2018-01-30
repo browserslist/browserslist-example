@@ -1,7 +1,7 @@
 @import-normalize;
 
 body {
-  user-select: none
+  user-select: none;
 }
 
 .popup {
@@ -11,5 +11,5 @@ body {
 }
 
 .slide {
-  will-change: transform
+  will-change: transform;
 }
