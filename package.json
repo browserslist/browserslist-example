@@ -51,8 +51,8 @@
     }
   },
   "scripts": {
-    "build:css": "postcss src/app.css -o build/app.css",
-    "build:js": "babel src/app.js -o build/app.js",
+    "build:css": "postcss src/app.css -o dist/app.css",
+    "build:js": "babel src/app.js -o dist/app.js",
     "lint:css": "stylelint src/*.css",
     "lint:js": "eslint src/*.js",
     "test": "npm run lint:css && npm run lint:js",
