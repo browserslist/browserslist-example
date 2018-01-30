@@ -1,6 +1,9 @@
+@import-normalize;
+
 body {
   user-select: none
 }
+
 .slide {
   will-change: transform
 }

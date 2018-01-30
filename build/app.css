@@ -1,37 +1,70 @@
+html {
+  line-height: 1.15
+}
+
 hr {
   overflow: visible
 }
+
+pre {
+  font-family: monospace, monospace;
+  font-size: 1em
+}
+
 abbr[title] {
   text-decoration: underline;
   text-decoration: underline dotted
 }
+
 b,
 strong {
   font-weight: bolder
 }
-button,
+
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em
+}
+
+small {
+  font-size: 80%
+}
+
+button {
+  text-transform: none
+}
+
 input {
   overflow: visible
 }
-button,
-select {
-  text-transform: none
-}
+
 legend {
   box-sizing: border-box;
-  color: inherit;
   display: table;
   max-width: 100%;
   padding: 0;
   white-space: normal
 }
+
+progress {
+  display: inline-block
+}
+
 details {
   display: block
 }
+
+summary {
+  display: list-item
+}
+
 body {
   -ms-user-select: none;
       user-select: none
 }
+
 .slide {
   will-change: transform
 }
