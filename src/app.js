@@ -1,3 +1,3 @@
 const array = [1, 2, 3];
-const [first] = array;
+const [first, second] = array;
 navigator.serviceWorker;
