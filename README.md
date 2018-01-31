@@ -8,7 +8,7 @@
 between different front-end tools.
 
 This repository shows how Browserslist is used in Autoprefixer, Babel,
-ESLint Stylelint, postcss-preset-env and postcss-normalize.
+ESLint Stylelint, `postcss-preset-env` and `postcss-normalize`.
 
 See [`package.json`] for config example.
 
@@ -17,14 +17,8 @@ See [`package.json`] for config example.
        alt="Sponsored by Evil Martians" width="236" height="54">
 </a>
 
-[stylelint-no-unsupported-browser-features]: https://github.com/ismay/stylelint-no-unsupported-browser-features
-[eslint-plugin-compat]:                      https://github.com/amilajack/eslint-plugin-compat
-[postcss-preset-env]: https://github.com/jonathantneal/postcss-preset-env
-[babel-preset-env]:                          https://github.com/babel/babel/tree/master/packages/babel-preset-env
-[postcss-normalize]:                         https://github.com/jonathantneal/postcss-normalize
-[`package.json`]:                            ./package.json
-[Browserslist]:                              https://github.com/ai/browserslist
-[Autoprefixer]:                              https://github.com/postcss/autoprefixer
+[`package.json`]: ./package.json
+[Browserslist]:   https://github.com/ai/browserslist
 
 ## How to Add Browserslist to Your Project
 
@@ -102,7 +96,7 @@ and add to `package.json`:
   }
 ```
 
-Now we can forget about prefixes and write clean code in `src/app.css`:
+Now we can forget about prefixes and write clean code in [`src/app.css`]:
 
 ```css
 body {
@@ -122,8 +116,9 @@ body {
 As you can see, Autoprefixer added only `-ms-` prefixes because
 Browserslist told that we support only Edge 16.
 
-[Can I Use]: http://caniuse.com/
-[PostCSS]:   http://postcss.org/
+[`src/app.css`]: ./src/app.css
+[Can I Use]:     http://caniuse.com/
+[PostCSS]:       http://postcss.org/
 
 
 ### Babel
@@ -162,7 +157,7 @@ and add to `package.json`:
   }
 ```
 
-Now we can write future JS syntax in `src/app.js`:
+Now we can write future JS syntax in [`src/app.js`]:
 
 ```js
 const array = [1, 2, 3];
@@ -179,7 +174,8 @@ const first = array[0],
 
 Note, that Babel doesn’t change `const` since Edge 16 supports it.
 
-[Babel]: https://babeljs.io/
+[`src/app.js`]: ./src/app.js
+[Babel]:        https://babeljs.io/
 
 
 ### PostCSS Preset Env
@@ -205,7 +201,7 @@ and add to `package.json`:
   },
 ```
 
-Now we can write future CSS in `src/app.css`:
+Now we can write future CSS in [`src/app.css`]:
 
 ```css
 .popup {
@@ -229,6 +225,7 @@ Note, plugin replaced `#bbb9` to `rgba()`, but didn’t replace CSS Custom
 Properties, because Edge 16 supports them.
 
 [`postcss-preset-env`]: https://github.com/jonathantneal/postcss-preset-env
+[`src/app.css`]: ./src/app.css
 
 
 ### PostCSS Normalize
@@ -236,7 +233,7 @@ Properties, because Edge 16 supports them.
 Browsers have different default styles. To have same styles
 in all browsers we need to “normalize” these differences.
 
-[PostCSS Normalize] is a fork of popular Normalize.css with 2 differents:
+[`postcss-normalize`] is a fork of popular Normalize.css with 2 differents:
 it doesn’t have opinionated styles, and it adds only necessary fixes according
 Browserslist target browsers.
 
@@ -318,8 +315,8 @@ $ npm test
 ✖ 1 problem (0 errors, 1 warning)
 ```
 
-[eslint-plugin-compat]: https://github.com/amilajack/eslint-plugin-compat
-[ESLint]:               https://eslint.org
+[`eslint-plugin-compat`]: https://github.com/amilajack/eslint-plugin-compat
+[ESLint]:                 https://eslint.org
 
 
 ### Stylelint
