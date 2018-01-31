@@ -8,7 +8,9 @@
 between different front-end tools.
 
 This repository shows how Browserslist is used in Autoprefixer, Babel,
-postcss-preset-env, postcss-normalize, ESLint and Stylelint.
+ESLint Stylelint, postcss-preset-env and postcss-normalize.
+
+See [`package.json`] for config example.
 
 <a href="https://evilmartians.com/?utm_source=browserslist-example">
   <img src="https://evilmartians.com/badges/sponsored-by-evil-martians.svg"
@@ -20,24 +22,24 @@ postcss-preset-env, postcss-normalize, ESLint and Stylelint.
 [postcss-preset-env]: https://github.com/jonathantneal/postcss-preset-env
 [babel-preset-env]:                          https://github.com/babel/babel/tree/master/packages/babel-preset-env
 [postcss-normalize]:                         https://github.com/jonathantneal/postcss-normalize
+[`package.json`]:                            ./package.json
 [Browserslist]:                              https://github.com/ai/browserslist
 [Autoprefixer]:                              https://github.com/postcss/autoprefixer
-
 
 ## How to Add Browserslist to Your Project
 
 Browserslist config can be defined in `.browserslistrc` file
 or in `browserslist` section of `package.json`.
 
-In this example we define target browsers in `package.json`
+In this example, we define target browsers in `package.json`
 to reduce config files in project root:
 
 ```diff
 {
   "private": true,
-+  "browserslist": [
-+    "Edge 16"
-+  ],
++ "browserslist": [
++   "Edge 16"
++ ],
   "scripts": {
   }
 }
@@ -59,10 +61,11 @@ Browserslist is a standard place to find project’s target browsers.
 
 With Browserslist config new developers will not bother you
 with questions like “What browsers do we support?”
-or “Do we support IE 11”? They will find answer in config.
+or “Do we support IE 11”? They will find an answer in config.
 
-Also Browserslist has CLI tool to show what browser versions
-is selected by project’s Browserslist queries (some of queries dependson Can I Use data):
+Also, Browserslist has CLI tool to show what browser versions
+is selected by project’s Browserslist queries (some of queries depends
+on Can I Use data):
 
 ```sh
 $ npx browserslist
@@ -73,7 +76,7 @@ edge 16
 ### Autoprefixer
 
 Autoprefixer is a [PostCSS] plugin to add vendor prefixes to CSS.
-It adds only actual prefixes according Browserslist’s arget browsers
+It adds only actual prefixes according to Browserslist’s target browsers
 and [Can I Use] data.
 
 Let’s install it:
@@ -88,14 +91,14 @@ and add to `package.json`:
   "browserslist": [
     "Edge 16"
   ],
-+  "postcss": {
-+    "plugins": {
-+      "autoprefixer": {}
-+    }
-+  },
++ "postcss": {
++   "plugins": {
++     "autoprefixer": {}
++   }
++ },
   "scripts": {
-+    "build:css": "postcss src/app.css -o build/app.css",
-+    "build": "npm run build:css"
++   "build:css": "postcss src/app.css -o build/app.css",
++   "build": "npm run build:css"
   }
 ```
 
@@ -144,18 +147,18 @@ and add to `package.json`:
       "autoprefixer": {}
     }
   },
-+  "babel": {
-+    "presets": [
-+      [
-+        "@babel/env"
-+      ]
-+    ]
-+  },
++ "babel": {
++   "presets": [
++     [
++       "@babel/env"
++     ]
++   ]
++ },
   "scripts": {
     "build:css": "postcss src/app.css -o build/app.css",
-+    "build:js": "babel src/app.js -o dist/app.js",
--    "build": "npm run build:css"
-+    "build": "npm run build:css && npm run build:js"
++   "build:js": "babel src/app.js -o dist/app.js",
+-   "build": "npm run build:css"
++   "build": "npm run build:css && npm run build:js"
   }
 ```
 
@@ -181,8 +184,8 @@ Note, that Babel doesn’t change `const` since Edge 16 supports it.
 
 ### PostCSS Preset Env
 
-[`postcss-preset-env`] is a “Babel for CSS”. It compiles future CSS syntax
-to CSS supported by target browsers. It is similiar to cssnext, but more accurate
+[`postcss-preset-env`] is a “Babel for CSS.” It compiles future CSS syntax
+to CSS supported by target browsers. It is similar to cssnext, but more accurate
 with CSS spec and has `stage` option.
 
 Let’s install it
@@ -196,7 +199,7 @@ and add to `package.json`:
 ```diff
   "postcss": {
     "plugins": {
-+      "postcss-preset-env": {},
++     "postcss-preset-env": {},
       "autoprefixer": {}
     }
   },
@@ -230,11 +233,11 @@ Properties, because Edge 16 supports them.
 
 ### PostCSS Normalize
 
-Browsers has different default styles. To have same styles
+Browsers have different default styles. To have same styles
 in all browsers we need to “normalize” these differences.
 
 [PostCSS Normalize] is a fork of popular Normalize.css with 2 differents:
-it doesn’t have opinionated styles and it adds only necessary fixes according
+it doesn’t have opinionated styles, and it adds only necessary fixes according
 Browserslist target browsers.
 
 Let’s install it
@@ -269,8 +272,8 @@ because `postcss-normalize` added rules necessary only for Edge 16.
 ### ESLint
 
 [ESLint] is a tool to find mistakes in your JS. [`eslint-plugin-compat`]
-is a plugin to ESLint to warn that some of target browsers doesn’t have used
-JS API.
+is a plugin to ESLint to warn that some of the target browsers
+don’t have used JS API.
 
 Let’s install it
 
@@ -281,22 +284,22 @@ $ npm install eslint eslint-plugin-compat
 and add to `package.json`:
 
 ```diff
-+  "eslintConfig": {
-+    "parserOptions": {
-+      "ecmaVersion": 6
-+    },
-+    "plugins": [
-+      "compat"
-+    ],
-+    "rules": {
-+      "compat/compat": "warn"
-+    }
-+  },
++ "eslintConfig": {
++   "parserOptions": {
++     "ecmaVersion": 6
++   },
++   "plugins": [
++     "compat"
++   ],
++   "rules": {
++     "compat/compat": "warn"
++   }
++ },
   "scripts": {
     "build:css": "postcss src/app.css -o dist/app.css",
     "build:js": "babel src/app.js -o dist/app.js",
-+    "lint:js": "eslint src/*.js",
-+    "test": "npm run lint:js",
++   "lint:js": "eslint src/*.js",
++   "test": "npm run lint:js",
     "build": "npm run build:css && npm run build:js"
   },
 ```
@@ -323,7 +326,7 @@ $ npm test
 
 [Stylelint] is a “ESLint for CSS” to warn you about mistakes in CSS.
 It also has [`stylelint-no-unsupported-browser-features`] plugin
-to warn you when some of target browsers doesn’t support used CSS property.
+to warn you when some of the target browsers doesn’t support used CSS property.
 
 Let’s install it
 
@@ -334,22 +337,22 @@ $ npm install stylelint stylelint-no-unsupported-browser-features
 and add to `package.json`:
 
 ```diff
-+  "stylelint": {
-+    "plugins": [
-+      "stylelint-no-unsupported-browser-features"
-+    ],
-+    "rules": {
-+      "plugin/no-unsupported-browser-features": true
-+    },
-+    "defaultSeverity": "warning"
-+  },
++ "stylelint": {
++   "plugins": [
++     "stylelint-no-unsupported-browser-features"
++   ],
++   "rules": {
++     "plugin/no-unsupported-browser-features": true
++   },
++   "defaultSeverity": "warning"
++ },
   "scripts": {
     "build:css": "postcss src/app.css -o dist/app.css",
     "build:js": "babel src/app.js -o dist/app.js",
-+    "lint:css": "stylelint src/*.css",
++   "lint:css": "stylelint src/*.css",
     "lint:js": "eslint src/*.js",
--    "test": "npm run lint:js",
-+    "test": "npm run lint:js && npm run lint:css",
+-   "test": "npm run lint:js",
++   "test": "npm run lint:js && npm run lint:css",
     "build": "npm run build:css && npm run build:js"
   },
 ```
