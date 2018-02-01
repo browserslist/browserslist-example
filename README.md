@@ -25,8 +25,8 @@ See [`package.json`] for config example.
 Browserslist config can be defined in `.browserslistrc` file
 or in `browserslist` section of `package.json`.
 
-In this example, we define target browsers in `package.json`
-to reduce config files in project root:
+In this example, we defined target browsers in `package.json`
+to reduce config files in project dir:
 
 ```diff
 {
@@ -55,11 +55,10 @@ Browserslist is a standard place to find project’s target browsers.
 
 With Browserslist config new developers will not bother you
 with questions like “What browsers do we support?”
-or “Do we support IE 11”? They will find an answer in config.
+or “Do we support IE 11”? They will find an answer in the config.
 
 Also, Browserslist has CLI tool to show what browser versions
-is selected by project’s Browserslist queries (some of queries depends
-on Can I Use data):
+is selected by project’s Browserslist queries:
 
 ```sh
 $ npx browserslist
@@ -70,7 +69,7 @@ edge 16
 ### Autoprefixer
 
 Autoprefixer is a [PostCSS] plugin to add vendor prefixes to CSS.
-It adds only actual prefixes according to Browserslist’s target browsers
+It adds only actual prefixes according to Browserslist’s target browsers
 and [Can I Use] data.
 
 Let’s install it:
@@ -124,7 +123,7 @@ Browserslist told that we support only Edge 16.
 ### Babel
 
 [Babel] is a tool to compile JS files. The most popular way to use it
-is to compile future JS syntaxes to JS supported by target browsers.
+is to compile future JS syntaxes to JS supported by target browsers.
 From Babel 7.0 `@babel/preset-env` loads target browsers
 from the same Browserslist config.
 
@@ -164,7 +163,7 @@ const array = [1, 2, 3];
 const [first, second] = array;
 ```
 
-Babel will compile it to JS for Edge 16:
+Babel will compile it for Edge 16:
 
 ```js
 const array = [1, 2, 3];
@@ -181,10 +180,10 @@ Note, that Babel doesn’t change `const` since Edge 16 supports it.
 ### PostCSS Preset Env
 
 [`postcss-preset-env`] is a “Babel for CSS.” It compiles future CSS syntax
-to CSS supported by target browsers. It is similar to cssnext, but more accurate
+to CSS supported by target browsers. It is similar to cssnext, but more accurate
 with CSS spec and has `stage` option.
 
-Let’s install it
+Let’s install it:
 
 ```sh
 $ npm install postcss-preset-env
@@ -211,7 +210,7 @@ Now we can write future CSS in [`src/app.css`]:
 }
 ```
 
-And `postcss-preset-env` will compile it to:
+And `postcss-preset-env` will compile it for Edge 16:
 
 ```css
 .popup {
@@ -237,7 +236,7 @@ in all browsers we need to “normalize” these differences.
 it doesn’t have opinionated styles, and it adds only necessary fixes according
 Browserslist target browsers.
 
-Let’s install it
+Let’s install it;
 
 ```sh
 $ npm install postcss-normalize
@@ -255,12 +254,11 @@ and add to `package.json`:
   },
 ```
 
-Now plugin will replace `@import-normalize;` in our CSS files
-to rules, which normalize Edge 16 styles. You can check them
-in [`dist/app.css`].
+Now plugin will replace `@import-normalize;` to CSS which normalize
+Edge 16 styles. You can check output in [`dist/app.css`].
 
-Note that inserted rules are smaller than standard Normalize.css,
-because `postcss-normalize` added rules necessary only for Edge 16.
+Note that inserted CSS is smaller than standard Normalize.css.
+`postcss-normalize` added rules necessary only for Edge 16.
 
 [`postcss-normalize`]: https://github.com/jonathantneal/postcss-normalize
 [`dist/app.css`]:      ./dist/app.css
@@ -268,11 +266,10 @@ because `postcss-normalize` added rules necessary only for Edge 16.
 
 ### ESLint
 
-[ESLint] is a tool to find mistakes in your JS. [`eslint-plugin-compat`]
-is a plugin to ESLint to warn that some of the target browsers
-don’t have used JS API.
+[ESLint] finds mistakes in your JS. [`eslint-plugin-compat`]
+is a plugin to ESLint to warn that JS will not work in all target browsers.
 
-Let’s install it
+Let’s install it:
 
 ```sh
 $ npm install eslint eslint-plugin-compat
@@ -301,7 +298,7 @@ and add to `package.json`:
   },
 ```
 
-Now, if you will write `navigator.serviceWorker` in your JS, ESLint will warn
+Now, if you will write `navigator.serviceWorker`, ESLint will warn
 you that Edge 16 doesn’t support Service Workers:
 
 ```
@@ -323,9 +320,9 @@ $ npm test
 
 [Stylelint] is a “ESLint for CSS” to warn you about mistakes in CSS.
 It also has [`stylelint-no-unsupported-browser-features`] plugin
-to warn you when some of the target browsers doesn’t support used CSS property.
+to warn you when CSS property will not work in all target browsers.
 
-Let’s install it
+Let’s install it:
 
 ```sh
 $ npm install stylelint stylelint-no-unsupported-browser-features
