@@ -7,8 +7,14 @@
 [Browserslist] is a config to share target browsers
 between different front-end tools.
 
-This repository shows how Browserslist is used in Autoprefixer, Babel,
-ESLint Stylelint, `postcss-preset-env` and `postcss-normalize`.
+This repository shows how Browserslist is used by:
+* [developers](#developers)
+* [Autoprefixer](#autoprefixer)
+* [Babel](#babel)
+* [`postcss-preset-env`](#postcss-preset-env)
+* [`postcss-normalize`](#postcss-normalize)
+* [ESLint](#eslint)
+* [Stylelint](#stylelint)
 
 See [`package.json`] for config example.
 
