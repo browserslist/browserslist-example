@@ -8,13 +8,14 @@
 between different front-end tools.
 
 This repository shows how Browserslist is used by:
-* [developers](#developers)
-* [Autoprefixer](#autoprefixer)
-* [Babel](#babel)
-* [`postcss-preset-env`](#postcss-preset-env)
-* [`postcss-normalize`](#postcss-normalize)
-* [ESLint](#eslint)
-* [Stylelint](#stylelint)
+
+* **[developers](#developers)**
+* **[Autoprefixer](#autoprefixer)**
+* **[Babel](#babel)**
+* **[postcss-preset-env](#postcss-preset-env)**
+* **[postcss-normalize](#postcss-normalize)**
+* **[ESLint](#eslint)**
+* **[Stylelint](#stylelint)**
 
 See [`package.json`] for config example.
 
