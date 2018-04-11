@@ -13,7 +13,7 @@
   "babel": {
     "presets": [
       [
-        "@babel/env"
+        "@babel/preset-env"
       ]
     ]
   },
