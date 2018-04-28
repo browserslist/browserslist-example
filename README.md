@@ -1,7 +1,7 @@
 # Browserslist Example
 
 <img align="right" width="120" height="120"
-     src="https://ai.github.io/browserslist/logo.svg"
+     src="https://browserslist.github.io/browserslist/logo.svg"
      alt="Browserslist logo by Anton Lovchikov">
 
 [Browserslist] is a config to share target browsers
