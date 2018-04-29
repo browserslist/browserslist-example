@@ -46,16 +46,16 @@
     "build": "npm run test && npm run build:css && npm run build:js"
   },
   "dependencies": {
-    "@babel/cli": "^7.0.0-beta.40",
-    "@babel/core": "^7.0.0-beta.40",
-    "@babel/preset-env": "^7.0.0-beta.40",
-    "autoprefixer": "^8.1.0",
-    "eslint": "^4.18.2",
+    "@babel/cli": "^7.0.0-beta.46",
+    "@babel/core": "^7.0.0-beta.46",
+    "@babel/preset-env": "^7.0.0-beta.46",
+    "autoprefixer": "^8.4.1",
+    "eslint": "^4.19.1",
     "eslint-plugin-compat": "^2.2.0",
     "postcss-cli": "^5.0.0",
     "postcss-normalize": "^4.0.0",
-    "postcss-preset-env": "^3.2.2",
-    "stylelint": "^9.1.1",
-    "stylelint-no-unsupported-browser-features": "^2.0.0"
+    "postcss-preset-env": "^4.1.0",
+    "stylelint": "^9.2.0",
+    "stylelint-no-unsupported-browser-features": "^3.0.0"
   }
 }
