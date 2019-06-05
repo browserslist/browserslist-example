@@ -25,7 +25,7 @@ See [`package.json`] for config example.
 </a>
 
 [`package.json`]: ./package.json
-[Browserslist]:   https://github.com/ai/browserslist
+[Browserslist]:   https://github.com/browserslist/browserslist
 
 ## How to Add Browserslist to Your Project
 
