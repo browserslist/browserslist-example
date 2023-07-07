@@ -55,7 +55,7 @@
     "postcss-cli": "^5.0.0",
     "postcss-normalize": "^4.0.0",
     "postcss-preset-env": "^4.1.0",
-    "stylelint": "^9.2.0",
+    "stylelint": "^15.10.1",
     "stylelint-no-unsupported-browser-features": "^3.0.0"
   }
 }
